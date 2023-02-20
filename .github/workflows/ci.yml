@@ -77,7 +77,7 @@ jobs:
           artifact_dir=build/artifactdir/abaddon-${{ matrix.buildtype }}-${GITHUB_SHA::7}
           mkdir -p ${artifact_dir}/bin ${artifact_dir}/etc/ssl/certs ${artifact_dir}/lib ${artifact_dir}/share/glib-2.0/schemas
           cd build
-          cp *.exe ${artifact_dir}/bin
+          cp *.exe ../${artifact_dir}/bin
           cd ..
           cp /mingw64/etc/ssl/certs/ca-bundle.crt ${artifact_dir}/etc/ssl/certs
           cp -r /mingw64/lib/gdk-pixbuf-2.0 ${artifact_dir}/lib
