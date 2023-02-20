@@ -151,7 +151,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-macos-${{ matrix.buildtype }}
-          path: ${{ runner.workspace }}/artifactdir
+          path: build/artifactdir
 
   linux:
     name: linux-${{ matrix.buildtype }}
